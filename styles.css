@@ -1,5 +1,25 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+button {
+    font-family: Roboto, sans-serif;
+    background-color: black;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: .875rem;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: .0892857143em;
+    height: 40px;
+    min-width: 64px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .background-container {
@@ -9,13 +29,48 @@ body {
     left: 0;
     top: 0;
     overflow: hidden;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
 }
 
-.container {
+.center-container {
     display: flex;
     min-height: 97.5vh;
     align-items: center;
     justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    align-items: end;
+}
+
+.nav-bar {
+}
+
+.nav-bar > .logo > img {
+    width: 70%;
+    margin: 5px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+     }
 }
 
 .fade-in {
@@ -28,4 +83,23 @@ body {
     50% {opacity: 1;}
     75% {opacity: 0.25;}
     100% {opacity:0;}
+}
+
+.left-header-text-container {
+    margin-top: 55%;
+    margin-left: 10%;
+}
+
+.left-header-text-container > h1 {
+    margin: 15px 0;
+    font-size: 3rem;
+}
+
+.right-header-text-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    height: 91%;
+    padding-top: 20%;
+    padding-left: 5%;
+    margin-right: -24%;
 }

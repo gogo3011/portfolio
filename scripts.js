@@ -18,7 +18,7 @@ function duplicateImgToBg(){
     let img = document.getElementsByClassName("repeat-bg")[0];
     let widthImg = 0;
     if (checkIfMobileAspectRatio()){
-        widthImg = document.documentElement.clientWidth/7;
+        widthImg = document.documentElement.clientWidth/6;
     } else {
         widthImg = document.documentElement.clientWidth/12;
     }
