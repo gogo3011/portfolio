@@ -5,21 +5,23 @@ body {
 
 button {
     font-family: Roboto, sans-serif;
-    background-color: black;
+    background-color: white;
     text-align: center;
     border: none;
-    color: white;
-    font-size: .875rem;
+    color: #1d72c3;
+    font-size: 1.1rem;
     display: inline-block;
     text-transform: uppercase;
-    padding: 0 2rem;
-    font-weight: bold;
+    padding: 1.5rem 3rem;
+    font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
     letter-spacing: .0892857143em;
     height: 40px;
     min-width: 64px;
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    line-height: 0;
+    margin: 19px;
 }
 
 .background-container {
@@ -29,7 +31,15 @@ button {
     left: 0;
     top: 0;
     overflow: hidden;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-size: 400% 400%;
+    animation: backgroud-ani 60s linear infinite;
+}
+
+@keyframes backgroud-ani {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .center-container {
@@ -45,14 +55,6 @@ button {
 
 .right {
     align-items: end;
-}
-
-.nav-bar {
-}
-
-.nav-bar > .logo > img {
-    width: 70%;
-    margin: 5px;
 }
 
 .container {
@@ -74,7 +76,7 @@ button {
 }
 
 .fade-in {
-    animation: fadeIn linear 2s infinite;
+    animation: fadeIn linear 4s infinite;
 }
 
 @keyframes fadeIn {
@@ -85,6 +87,10 @@ button {
     100% {opacity:0;}
 }
 
+.repeat-bg {
+    filter: invert(1);
+}
+
 .left-header-text-container {
     margin-top: 55%;
     margin-left: 10%;
@@ -93,13 +99,55 @@ button {
 .left-header-text-container > h1 {
     margin: 15px 0;
     font-size: 3rem;
+    color: white
 }
 
-.right-header-text-container {
+.left-header-text-container > img {
+    filter: invert(1);
+}
+
+form.header-form {
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(3px);
     height: 91%;
-    padding-top: 20%;
-    padding-left: 5%;
-    margin-right: -24%;
+    width: 400px;
+    padding: 0 5%;
+    border-radius: 0 0 100px 100px;
+}
+
+.right-header-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.right-header-text-container > h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+label {
+    font-family: Roboto, sans-serif;
+}
+
+input[type="text"] {
+    font-family: Roboto, sans-serif;
+    height: 30px;
+    width: 70%;
+    display: block;
+    background: #fffffff5;
+    border: unset;
+    border-radius: 3px;
+    font-size: 19px;
+    padding: 7px;
+    margin: 7px;
+}
+
+input[type="text"]:focus {
+    background: #ffffff;
+    outline: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
 }
