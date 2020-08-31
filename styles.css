@@ -92,8 +92,14 @@ button {
 }
 
 .left-header-text-container {
-    margin-top: 55%;
-    margin-left: 10%;
+    margin-top: 10%;
+}
+
+@media (min-width: 1200px) {
+    .left-header-text-container {
+        margin-top: 55%;
+        margin-left: 10%;
+    }
 }
 
 .left-header-text-container > h1 {
