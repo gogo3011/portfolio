@@ -5,6 +5,10 @@ function cloneElementNTimes(n, parent, el){
     }
 }
 
+function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }  
+
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -20,7 +24,7 @@ function duplicateImgToBg(){
     if (checkIfMobileAspectRatio()){
         widthImg = document.documentElement.clientWidth/6;
     } else {
-        widthImg = document.documentElement.clientWidth/12;
+        widthImg = (document.documentElement.clientWidth/12) - 1;
     }
     let bg = img.parentNode;
     img.width = widthImg;
