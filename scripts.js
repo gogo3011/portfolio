@@ -14,7 +14,7 @@ function getRandomArbitrary(min, max) {
 }
 
 function checkIfMobileAspectRatio(){
-    let ratio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    let ratio = window.screen.width / window.screen.height;
     return (ratio < 1);
 }
 
@@ -22,9 +22,9 @@ function duplicateImgToBg(){
     let img = document.getElementsByClassName("repeat-bg")[0];
     let widthImg = 0;
     if (checkIfMobileAspectRatio()){
-        widthImg = document.documentElement.clientWidth/6;
+        widthImg = window.screen.width/3;
     } else {
-        widthImg = (document.documentElement.clientWidth/12) - 1;
+        widthImg = (window.screen.width/12) - 1;
     }
     let bg = img.parentNode;
     img.width = widthImg;
