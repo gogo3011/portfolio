@@ -44,7 +44,7 @@ button {
 
 @media (max-width: 992px) {
     .background-container {
-        max-height: 110vh;
+        max-height: 120vh;
     }
 }
 
