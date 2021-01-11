@@ -93,9 +93,9 @@ button {
 
 @keyframes fadeIn {
     0% {opacity:0;}
-    25% {opacity: 0.25;}
+    25% {opacity: 0.50;}
     50% {opacity: 1;}
-    75% {opacity: 0.25;}
+    75% {opacity: 0.50;}
     100% {opacity:0;}
 }
 
@@ -199,7 +199,6 @@ a.button {
     padding: 0 2rem;
     font-size: 1rem;
     height: 54px;
-    line-height: 58px;
     font-weight: 400;
     border-radius: 2px;
     box-shadow: 0 3px 3px 0 rgba(0,0,0,.14),
@@ -308,7 +307,7 @@ i.fa {
     box-shadow: 0 8px 10px 1px rgba(0,0,0,.14),
     0 3px 14px 2px rgba(0,0,0,.12),
     0 5px 5px -3px rgba(0,0,0,.3);
-    margin: 10px 50px;
+    margin: 10px 3%;
 }
 
 .card .card-content {

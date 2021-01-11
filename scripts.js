@@ -1,4 +1,4 @@
-function cloneElementNTimes(n, parent, el){
+function cloneElementNTimes(n, parent, el) {
     for (let index = 0; index < n; index++) {
         el.style['animation-delay'] = getRandomArbitrary(-16, 0) + "s"
         parent.appendChild(el.cloneNode());
@@ -7,24 +7,34 @@ function cloneElementNTimes(n, parent, el){
 
 function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth;
-  }  
+}
 
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function checkIfMobileAspectRatio(){
+function checkIfMobileAspectRatio() {
     let ratio = window.screen.width / window.screen.height;
     return (ratio < 1);
 }
 
-function duplicateImgToBg(){
+function bindClicks() {
+    document.getElementsByClassName("projects-btn")[0].addEventListener('click', () => {
+        document.getElementById("projects").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+        });
+    })
+}
+
+function duplicateImgToBg() {
     let img = document.getElementsByClassName("repeat-bg")[0];
     let widthImg = 0;
-    if (checkIfMobileAspectRatio()){
-        widthImg = window.screen.width/3;
+    if (checkIfMobileAspectRatio()) {
+        widthImg = window.screen.width / 3;
     } else {
-        widthImg = (window.screen.width/12) - 1;
+        widthImg = (window.screen.width / 12) - 1;
     }
     let bg = img.parentNode;
     img.width = widthImg;
@@ -36,3 +46,4 @@ function duplicateImgToBg(){
 }
 
 (duplicateImgToBg())
+window.onload = bindClicks();
